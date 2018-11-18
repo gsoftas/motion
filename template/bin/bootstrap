@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Install Ruby Gems
+bundle install
+
+# Install Yarn globally
+npm install yarn -g
+
+# Install Gulp CLI globally 
+npm install gulp-cli -g
+
+# Install JS Dependancies
+yarn install

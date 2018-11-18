@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Make sure to make this file executable in order to run it (chmod +x filname from the command line)
+# # or run it using sh bin/na "Article Title"
+bundle exec middleman article --blog 'articles' $1 

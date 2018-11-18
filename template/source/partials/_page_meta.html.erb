@@ -1,0 +1,81 @@
+<!-- Page Metadata -->
+<!-- Content Type -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="robots" content="index" />
+
+
+<!-- Page Title -->
+<title><%= page_title(current_page) %></title>
+
+<!-- Feed Links -->
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="//feed.xml">
+
+<!-- Viewport -->
+<meta content="width=device-width initial-scale=1 viewport-fit=cover" name="viewport">
+
+<!-- Meta Tags -->
+<link rel="canonical" href="<%= page_url(current_page) %>">
+<meta name="name" itemprop="name" content="<%= data.site.title %>">
+<meta name="url" itemprop="url" content="<%= data.site.url %>">
+<meta itemprop="about" content="<%= page_meta_description(current_page) %>">
+<meta name="description" itemprop="description" content="<%= page_meta_description(current_page) %>">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="<%= data.site.title %>">
+<meta property="og:title" content="<%= page_title(current_page) %>">
+<meta property="og:url" content="<%= page_url(current_page) %>">
+<meta property="og:url" content="<%= data.site.url %>">
+<meta property="og:type" content="website">
+<meta property="og:description" content="<%= page_meta_description(current_page) %>">
+
+<% if data.site.social_media.instagram %>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@<%= data.site.social_media.instagram.split('/').last %>">
+<meta name="twitter:creator" content="@<%= data.site.social_media.instagram.split('/').last %>">
+<meta name="twitter:title" content="Home" >
+<meta name="twitter:description" content="<%= page_meta_description(current_page) %>">
+<% end %>
+
+<!-- Site Favicons -->
+<link href="" rel="image_src">
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/manifest.json" rel="manifest">
+<link color="#398ccc" href="/safari-pinned-tab.svg" rel="mask-icon">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "<%= page_url(current_page) %>"
+  },
+  "headline": "<%= page_title(current_page) %>",
+  "image": [
+    <% if current_page.data.cover != nil %>
+      "<%= absolute_image_source(current_page.data.cover) %>"
+    <% else %>
+      <%= absolute_image_source(data.site.site_logo) %>
+    <% end %>
+   ],
+  "author": {
+    "@type": "Person",
+    "name": <%= data.site.name %>
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": <%= data.site.title %>,
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<%= absolute_image_source(data.site.site_logo) %>"
+    }
+  },
+  "description": "<%= page_meta_description(current_page) %>"
+}
+</script>

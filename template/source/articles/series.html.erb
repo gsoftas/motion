@@ -1,0 +1,19 @@
+---
+blog: 'articles'
+---
+
+<div class="section">
+  <div class="container">
+
+    <h2>Categories</h2>
+    <ol>
+      <% blog_series('articles').each do |series, articles| %>
+        <li>
+          <%= link_to "#{series} (#{articles.size})", series_path(series) %>
+        </li>
+       <% end %>
+    </ol>
+    
+  </div>
+</div>
+

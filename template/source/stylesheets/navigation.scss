@@ -1,0 +1,62 @@
+.navbar {
+  font-family: $navigation-font-families;
+  font-size: $navigation-font-size;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+
+  @media screen and (min-width: $fullhd){
+    width: 80%;
+    max-width: 80%; 
+    margin: 0 auto;
+  }
+
+  &-brand {
+    padding-left: 2rem;
+
+    @media only screen and (max-width: $desktop) {
+      padding-left: 1rem;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      padding-left: 0rem;
+    }
+  }
+
+  &-end {
+    margin-right: 2rem;
+
+    @media screen and (max-width: $tablet) {
+      margin-right: 0;
+    }
+  }
+  
+  &-item {
+    color: #292929;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+
+    &:hover {
+      color: $primary-green !important;
+      background-color: rgba(17, 80, 80, 0.06) !important;
+    }
+
+    &.menu-active {
+
+      @media screen and (max-width: $large-tablet) {
+        border-left: 5px solid $primary-green;  
+        padding-left: 12px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        border-bottom: 2px solid $primary-green;
+        padding-bottom: 7px;
+      }
+
+    }
+  }
+}
+
+

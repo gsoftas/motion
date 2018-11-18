@@ -1,0 +1,16 @@
+---
+title: Motion Index
+---
+
+<div class="index-page-articles">  
+  <div class="articles container section">
+    <div class="column">
+      <h2 class="is-size-2 featured-header">Featured Articles</h2>
+    </div>
+    <% featured_posts.each do |article| %>
+      <div class="column">
+        <%= partial "partials/articles_listing", :locals => { article: article } %>
+      </div>
+    <% end %>
+  </div>
+</div>

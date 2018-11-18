@@ -1,0 +1,147 @@
+body {
+  zoom: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0,0,0, 0.84) !important;
+}
+
+a { color: $main-link-color; }
+
+.strike { 
+
+  font-family: $article-font-header-families;
+  display: block;
+  width:100%; 
+  text-align:center; 
+  border-bottom: 1px solid #a0a0a0; 
+  line-height: 0.1em; 
+  margin: 10px auto 20px; 
+ 
+  span { 
+    background:#fff; 
+    padding:0 5px; 
+  }
+}
+
+.youtube-container {
+
+  max-height: 35.5rem;
+  height: 35.5rem;
+  max-width: 95%;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $mobile) {
+    max-height: 20rem;
+    height: 15rem;
+    max-width: 100%;
+  }
+}
+
+.youtube-container + em { 
+  @extend .center; 
+  padding-bottom: 1rem; 
+
+  @media screen and (max-width: $mobile) {
+    font-size: .9rem;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop){
+    font-size: 1.1rem;
+  }
+}
+
+.soundcloud-container {
+  
+  max-height: 20rem;
+  height: 40rem;
+  max-width: 90%;
+  margin: 0rem auto;
+
+  @media only screen and (max-width: $mobile) {
+    max-height: 20rem;
+    height: 15rem;
+    max-width: 100%;
+  }
+}
+
+.spotify-container {
+  
+  max-height: 20rem;
+  height: 40rem;
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $mobile) {
+    max-height: 20rem;
+    height: 15rem;
+    max-width: 100%;
+  }
+}
+
+.index-page-intro-text {
+  font-family: $article-font-header-families;
+  font-weight: 300;
+}
+
+blockquote {
+  color: $primary-green;  
+  background-color: transparent !important;
+  border-left: 5px solid $primary-green !important;
+  width: 90%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;  
+  }
+}
+
+code {
+  color: $primary;
+}
+
+.highlight pre {
+  border-top: 10px solid $primary;
+}
+
+pre {
+  code {
+  @media screen and (max-width: $tablet) {
+    font-size: .8rem;  
+  }
+    font-size: 1rem;
+}
+}
+
+.is-transparent {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+
+  &:hover,
+  &.is-hovered,
+  &:focus,
+  &.is-focused {
+    border-color: white;
+    color: white;
+    box-shadow: 0px 0px 3px 0px lightgrey;
+  }
+
+  &:visited, &:active, &.is-active {
+    background-color: transparent;
+    border-color: lightgrey;
+    color: lightgrey;
+  }
+}
+
+.featured-header {
+  background-color: $primary;
+  color: white !important;
+  padding-left: 1rem;
+}
+
+.vertical-images {
+  img {
+    max-height: 50rem;  
+  }
+  
+}

@@ -1,0 +1,41 @@
+// Article Listing Width
+$articles-desktop-width: 92%;
+$articles-mobile-width: 100%;
+$articles-widescreen-width: 75%;
+$articles-fullhd-width: 75%;
+
+$article-font-families: 'Roboto', 'Roboto-fallback', sans-serif;
+$article-font-header-families: 'Oswald', 'Oswald-fallback', sans-serif;
+$article-tags-font-families: 'Oswald', 'Oswald-fallback', sans-serif;
+$article-summary-font-families: 'Lato', 'Lato-fallback', sans-serif;
+
+// Article Navigation
+$article-navigation-font-families: 'Oswald', 'Oswald-fallback', sans-serif;
+
+// Navigation 
+$navigation-font-families: 'Oswald', 'Oswald-fallback', sans-serif;
+$navigation-font-size: 1.2rem;
+$navbar-desktop-width: 92%;
+$navbar-mobile-width: 100%;
+$navbar-widescreen-width: 75%;
+$navbar-fullhd-width: 75%;
+
+// Pagination
+$pagination-font-families: 'Oswald', 'Oswald-fallback', sans-serif;
+
+// Search Results Variables
+$search-result-item-post-title: 'Oswald', 'Oswald-fallback', sans-serif;
+$search-result-item-post-date: 'Oswald', 'Oswald-fallback', sans-serif;
+
+$base-spacing: 1rem;
+$main-link-color: #4A4A57;
+
+// Layout Variables
+$mobile: 768px;
+
+// Screen & Device Sizes
+$small-phone: 320px;    // iPhone 5, 5s
+$normal-phone: 375px;   // iPhone 6/7/8/X
+$large-phone: 424px;    // iPhone 6/7/8 Plus
+$small-tablet: 768px;   // iPad
+$large-tablet: 1024px;  // iPad Pro

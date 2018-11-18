@@ -1,0 +1,32 @@
+---
+blog: 'articles'
+---
+<div class="articles-container">
+  <div class="tags-container articles">
+    <h3 class="is-size-3">Articles Tag List</h3>
+    <div class="tags">
+      <% sort_collection(blog.tags).each do |tag, articles| %>
+        <span class="tag is-medium">
+          <a href="<%= tag_path(tag) %>">
+            <%= titleize(tag) %> (<%= articles.count %>)
+          </a>
+        </span>
+    </div>
+  </div>
+  
+  <br>
+
+  <div class="articles">
+    <h2 class="is-size-3" style="color: #1B998B;"><%= titleize(tag) %> articles</h2>
+    <br>
+    <% articles.each do |article| %>
+      <div class="article-listing-container column">
+        <%= partial "partials/articles_listing", :locals => { :article => article } %>
+      </div>
+    <% end %>
+    </div>
+     <% if tag != blog.tags.keys.last %>
+        <hr class="divider">
+     <% end %> 
+    <% end %>
+</div>

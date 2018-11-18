@@ -1,0 +1,28 @@
+
+.articles-pagination {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+}
+
+p.pagination-index {
+  font-family: $pagination-font-families;
+  order: 2;
+}
+
+.pagination-previous {
+  order: 1;
+}
+
+.pagination-next {
+  order: 3;
+}
+
+.pagination-container {
+  justify-content: space-between;
+}
+
+.pagination-next, .pagination-previous {
+  font-family: $pagination-font-families;
+  max-width: 30%;
+}

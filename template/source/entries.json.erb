@@ -1,0 +1,26 @@
+---
+blog: articles
+---
+<%
+entries = []
+
+data.site.site_sections.each do |section|
+  blog(section).articles.each do |article|
+    entry = {
+      :title => article.title,
+      :date => formatted_date(article.date), 
+      :tags => tags_as_a_string(article.tags) || '',
+      :category => article.data.category || '',
+      :url => article.url,
+      :content => strip_tags(article.body.strip),
+      :summary => resource_summary(article),
+      :cover_image => image_source(article.data.cover),
+      :blog => section
+    }
+
+    entries << entry
+  end
+end
+%>
+
+<%= entries.to_json %>

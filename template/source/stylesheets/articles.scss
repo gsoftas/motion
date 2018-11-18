@@ -1,0 +1,51 @@
+.articles {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $article-font-header-families;
+    color: $primary;
+  }
+
+  @media screen and (max-width: $mobile) {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $desktop) and (-webkit-min-device-pixel-ratio: 2){
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $fullhd){
+    max-width: 75%;
+    width: 75%;
+    margin: 0 auto;
+  }
+ 
+  a { color: #4A4A57; }
+  
+  &-container {
+    padding: 3rem 1.5rem;
+
+    .tags-container {
+      font-family: $article-tags-font-families;
+    }
+  }
+}
+
+.article-classification .tag-list > .tag {
+  margin-bottom: 0rem;
+  font-family: $article-tags-font-families;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 0.3rem;
+  }
+}
+

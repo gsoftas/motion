@@ -1,0 +1,44 @@
+  <hr class="article-tag-separator">
+  <div class="article-classification columns">
+    <div class="column">
+      <% if article.tags.empty? %>
+        <div class="tags columns">
+          <span class="article-listing-classification-tags column">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+          </span>
+          <div class="tag-list column">
+            <span class="tag">
+              <small>None</small>
+            </span>
+          </div>  
+        </div>                
+      <% else %>
+        <div class="tags columns">
+          <span class="article-listing-classification-tags column center">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+          </span>
+          <div class="tag-list column">
+          <% sort_collection(article.tags).each do |tag| %>
+            <span class="tag">
+              <%= link_to "#{titleize(tag)}", tag_path(tag, article.data.section) %> 
+            </span>
+          <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <% if article.data.category %>
+      <div class="column">
+        <div class="tags columns center">
+          <span class="article-listing-classification-category column center">
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+          </span>
+          <div class="tag-list column left">
+            <span class="tag">
+              <%= link_to "#{titleize(article.data.category)}", category_path(article.data.category, article.data.section) %>
+            </span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>

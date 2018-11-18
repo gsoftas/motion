@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="<%= image_path 'motion-logo.png' %>" alt="Motion">
+    </a>
+    
+    <button class="button navbar-burger" data-target="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </div>
+
+  <div class="navbar-menu" id="navMenu">
+    <div class="navbar-start">
+        <a class="navbar-item navbar-main <%= is_active_page?('/articles/') %>" href="/articles">
+          Articles
+        </a>
+        <a class="navbar-item navbar-main <%= is_active_page?('/about/') %>" href="/about">
+          About
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item navbar-main <%= is_active_page?('/search/') %>" href="/search" id="searchBar">
+          Search
+        </a>  
+      </div>
+    </div>
+</nav>

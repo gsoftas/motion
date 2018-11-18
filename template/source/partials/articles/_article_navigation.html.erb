@@ -1,0 +1,22 @@
+<div class="article-navigation">
+  <div class="other-articles columns">
+    <div class="previous column is-half-size">
+      <% if (current_article.article_previous != nil) %>
+        <div class="has-text-centered">
+          <a href="<%= current_article.article_previous.url %>">
+                <span><%="← Previous: #{current_article.article_previous.title}"%></span>
+              </a>
+        </div>
+        <% end %>
+    </div>
+    <div class="next column is-half-size">
+      <% if current_article.article_next != nil %>
+        <div class="has-text-centered">
+          <a href="<%= current_article.article_next.url %>">
+              <span><%="Next: #{current_article.article_next.title} →" %> </span>
+            </a>
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>

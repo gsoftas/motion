@@ -1,0 +1,129 @@
+.article {
+
+  font-family: $article-font-families;
+  font-size: 1.3rem;
+
+
+  &-content h1, h2, h3, h4, h5, h6 {
+    font-family: $article-font-header-families;
+    color: $primary;
+  }
+
+  &-content {
+    max-width: 75%;
+    line-height: 2;
+    word-wrap: break-word;
+
+    font-family: $article-font-families;
+    font-weight: 300;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 1rem;
+      max-width: 95%;
+    }
+
+    a { 
+      color: $primary; 
+      font-weight: 400;
+    }
+
+    @media screen and (min-width: $tablet) {
+      max-width: 75%;
+    }
+  }
+
+  &-cover-image {
+    @media screen and (max-width: $tablet) {
+      background-position: left !important;
+    }
+  }
+
+  &-hero {
+    min-height: 94vh !important;
+  }
+
+  &-cover-title {
+    font-family: $article-font-header-families;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px #000000;
+    max-width: 70%;
+    margin-bottom: 2rem !important;
+
+    @media screen and (max-width: $tablet){
+      font-size: 2.5rem;
+    }
+  }
+
+  &-cover-subtitle {
+    font-family: $article-font-header-families;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px #000000;
+    font-style: italic;
+
+    @media screen and (max-width: $tablet){
+      font-size: 1.25rem;
+    }
+  }
+
+  &-cover-time-to-read {
+    padding-left: 1rem;
+  }
+  
+  &-cover-container {
+    padding-left: 1rem; 
+
+    @media screen and (min-width: $desktop){
+      padding-left: 1rem;       
+    }
+
+    @media screen and (min-width: $tablet){
+      padding-left: 6rem; 
+    }
+
+    @media screen and (min-width: $mobile) {
+      padding-left: 1rem;
+    }
+  }
+
+  &-cover-classification-tags, 
+  &-cover-classification-category {
+    max-width: 10%;
+  }
+
+  &-cover-classification-container {
+    .tag {
+      background-color: rgba(27, 153, 139, 0.8) !important;
+    }
+
+    .fa-tags {
+      font-size: 1rem;
+    }
+  }
+
+  &-cover-classification,
+  &-cover-classification-categories {
+    margin-left: 0;
+    margin-right: 0;
+
+    a { color: white !important; }
+  }
+
+  &-listing-classification-tags, &-listing-classification-category {
+    max-width: 10%; 
+  }
+
+  &-navigation {
+    a { color: $primary; }
+  }
+
+  &-listing-container {
+    padding: 0.75rem 0;
+  }
+
+  &-listing-summary {
+    font-family: $article-summary-font-families;
+    font-weight: 300;
+  }
+}
+
+ 

@@ -1,0 +1,70 @@
+.search-box {
+  padding: 1rem 0;
+  margin: 0 auto;
+
+  .error-messages {
+    .message {
+      margin-bottom: 1rem; 
+      font-family: $search-result-item-post-title;
+    }
+  }
+
+  input {
+    font-family: $search-result-item-post-title;
+  }
+}
+
+.search-container {
+ min-height: 50vh;
+}
+
+#search {
+  @media screen and (min-width: $desktop) {
+    margin-right: 3rem;  
+  }
+}
+
+.search-results {
+  @media screen and (min-width: $desktop) {
+    width: 80%;
+    margin: 0 auto;  
+  }  
+}
+
+.search-result-item {
+  @extend .article-listing;
+
+  .search-result-thumbnail {
+    @extend .article-listing-thumbnail;
+  }
+
+  .search-result-content {
+    @extend .article-listing-content;
+
+    .search-result-content-title {
+      @extend .article-listing-content-title;
+    }
+
+    .search-result-meta {
+      @extend .article-listing-meta;
+
+      .search-result-meta-date {
+        @extend .article-listing-meta-date;
+      }
+
+      .search-result-summary {
+        @extend .article-listing-summary;
+      }
+    }
+  }
+}
+
+.search-result-item .article-listing-content .article-listing-title {
+  font-size: 1.8rem;
+  font-family: $search-result-item-post-title;
+}
+
+.search-result-item .article-listing-meta .article-listing-date {
+    font-size: 1.2rem;
+    font-family: $search-result-item-post-date;
+}

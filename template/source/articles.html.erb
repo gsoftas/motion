@@ -1,0 +1,16 @@
+---
+title: Articles
+pageable: true
+per_page: 5
+blog: articles
+---
+<div class="articles container">
+  <div class="section">
+    <% page_articles.each do |article| %>
+      <div class="article-listing-container column">
+          <%= partial "partials/articles_listing", :locals => { :article => article } %>
+      </div>
+    <% end %>
+    <%= partial "partials/articles/article_pagination" %>
+    </div>
+</div>

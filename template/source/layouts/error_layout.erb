@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial "partials/page_meta" %>
+    <%= stylesheet_link_tag "site" %>
+  </head>
+  <body>
+    
+    <%= yield %>
+
+    <%= javascript_include_tag "site" %>
+  </body>
+</html>

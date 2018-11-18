@@ -1,0 +1,34 @@
+.article-navigation a {
+  font-family: $article-navigation-font-families;
+  
+  @media screen and (min-width: $tablet + 1px) {
+    font-size: 1.5rem; 
+  }
+  
+  @media screen and (max-width: $mobile) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: $tablet) {
+    font-size: 1.2rem;
+  }
+}
+
+.other-articles {
+  .previous, .next {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  @media screen and (max-width: $tablet) {
+    .previous {
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;  
+    }
+    .next {
+      border-top: none;
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 1rem;
+    }
+  }
+}

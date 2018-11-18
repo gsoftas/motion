@@ -1,0 +1,41 @@
+<div class="article-cover-classification-container">
+  <div class="article-cover-classification columns has-text-white">
+    <div class="column">
+      <% if current_page.tags == nil %>
+      <div class="tags columns">
+        <span class="article-cover-classification-tags"><i class="fa fa-tags" aria-hidden="true"></i></span>
+        <div class="tag-list tags">
+          <span class="tag" style="color: white;">
+            <small>None</small>
+          </span>
+        </div>
+      </div>
+      <% else %>
+      <div class="tags columns">
+        <span class="article-cover-classification-tags"><i class="fa fa-tags" aria-hidden="true"></i></span>
+        <div class="tag-list column">
+          <% sort_collection(current_page.tags).each do |tag|%>
+          <span class="tag">
+            <%= link_to "#{titleize(tag)}", tag_path(tag, current_page.data.section) %> 
+          </span>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="article-cover-classification-categories columns has-text-white">
+    <div class="column">
+      <% if current_page.data.category %>
+      <div class="tags columns">
+        <span class="article-cover-classification-category"><i class="fa fa-folder-o" aria-hidden="true"></i></span>
+        <div class="column">
+          <span class="tag" style="color: white;">
+            <%= link_to "#{titleize(current_page.data.category)}", category_path(current_page.data.category, 'articles') %>
+          </span>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

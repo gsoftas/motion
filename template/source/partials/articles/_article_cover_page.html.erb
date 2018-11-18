@@ -1,0 +1,21 @@
+<section class="article-hero hero is-fullheight" style="background: <%= cover_opacity %>, url(<%= responsive_thumbnail_path(cover) %>); background-size: cover; background-position: center">
+  <div class="hero-body">
+    <div class="article-cover-container container">
+      <h1 class="article-cover-title has-text-white title"><%= current_page.data.title %></h1>
+      
+      <% if current_page.data.subtitle %>
+        <h2 class="article-cover-subtitle has-text-white subtitle"><%= current_page.data.subtitle %></h2>
+      <% end %>
+
+      <h3 class="article-cover-date has-text-white subtitle"><%= published_or_updated_last(current_page) %></h3>
+     
+      <h6 class="is-size-6 has-text-white">
+        <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+        <span class="article-cover-time-to-read"><%= time_to_read(current_page) %></span>
+      </h6>
+
+      <br>
+      
+      <%= partial "partials/articles/article_cover_classification", locals => { :current_page => current_page } %>
+  </div>
+</section>

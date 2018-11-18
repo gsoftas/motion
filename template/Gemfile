@@ -1,0 +1,19 @@
+source 'https://rubygems.org'
+
+gem "middleman-blog"
+gem 'middleman'
+
+
+gem 'middleman-syntax'
+gem 'middleman-livereload'
+gem 'middleman-core'
+
+gem 'httparty'
+gem 'json'
+gem 'redcarpet'
+gem 'nokogiri'
+gem 'builder'
+gem 'rouge'
+
+gem 'middleman-pry'
+

@@ -1,0 +1,22 @@
+.general-page {
+  
+  font-family: $article-font-families;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2;
+
+  &-content h1, h2, h3, h4, h5, h6 {
+    font-family: $article-font-header-families;
+    color: $primary-green;
+  }
+
+  &-content {
+    a { 
+      color: $primary-green; 
+      font-weight: 400;
+    }
+
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}

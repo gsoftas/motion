@@ -1,0 +1,17 @@
+<% wrap_layout :layout do %>
+  <article class="article">
+
+    <%= partial("partials/articles/article_cover_page", :locals => { cover: current_page.data.cover }) %>
+
+    <section class="article-content container">
+      <div class="section">
+        <div class="content">
+          <%= yield %>  
+        </div>
+      </div>
+    </section>
+
+    <%= partial("partials/articles/article_navigation", :locals => { current_article: current_article }) %>
+
+  </article>
+<% end %>

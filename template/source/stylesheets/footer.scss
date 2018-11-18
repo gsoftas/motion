@@ -1,0 +1,41 @@
+.footer {
+
+  font-family: $article-summary-font-families;
+  font-size: 1.3rem;
+  font-weight: 300;
+
+  .icon {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  a:link {
+    color: $primary-green;
+  }
+
+  &-social-media-icons-container {
+    padding: 1rem 0;
+  }
+}
+
+.footer .footer-social-media-icons-container {
+  margin-bottom: 1rem;
+
+ a {
+  margin-right: 2rem;
+  font-size: 2rem;
+
+  @media screen and (max-width: $tablet) {
+    margin-right: 0rem;
+    font-size: 1.5rem;
+  }
+ } 
+}
+
+.footer .footer-social-media-text-container {
+  font-size: 1.3rem;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 1.1rem;
+  }
+}

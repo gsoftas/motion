@@ -1,0 +1,23 @@
+name: My Website Name
+author: Website Author
+title: Motion Template
+url: https://website.url
+subtitle: 
+description: Website Description
+image: motion-logo.png
+default_background_image: 
+feed_link: //feed.rss.xml
+feed_rss_link: //feed.rss.xml
+site_sections: 
+  - articles
+
+social_media:
+  stack_overflow: 
+  vimeo: 
+  angelist: 
+  linkedin: https://www.linkedin.com
+  github: https://www.github.com
+  facebook: https://www.facebook.com
+  instagram: https://www.instagram.com
+  twitter: https://www.twitter.com
+  spotify: https://www.spotify.com

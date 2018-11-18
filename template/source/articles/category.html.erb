@@ -1,0 +1,16 @@
+---
+pageable: true
+per_page: 5
+---
+
+<div class="articles container">
+  <div class="section">
+    <h2 class="is-size-2"><%= category %> articles</h2>
+    <% page_articles.each do |article| %>
+      <div class="article-listing-container column">
+        <%= partial "partials/articles_listing", :locals => { :article => article } %>
+      </div>
+    <% end %>
+    <%= partial "partials/articles/article_pagination" %>
+    </div>
+</div>

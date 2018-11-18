@@ -1,0 +1,39 @@
+$primary-green: #1B998B;
+$primary: $primary-green;
+
+$github: #333;
+$github-invert: findColorInvert($github);
+$instagram: #262626;
+$instagram-invert: findColorInvert($instagram);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$linkedin: #0077B5;
+$linkedin-invert: findColorInvert($linkedin);
+$facebook: #3B5998;
+$facebook-invert: findColorInvert($facebook);
+$spotify: #1db954;
+$spotify-invert: findColorInvert($spotify);
+
+.github {
+  color: $github;
+}
+
+.instagram {
+  color: $instagram;
+}
+
+.twitter {
+  color: $twitter;
+}
+
+.linkedin {
+  color: $linkedin;
+}
+
+.facebook {
+  color: $facebook;
+}
+
+.spotify {
+  color: $spotify;
+}
